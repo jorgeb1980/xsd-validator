@@ -30,6 +30,7 @@ public class XsdValidator {
             validator.validate(new StreamSource(getFile(xmlPath)));
             return true;
         } catch (SAXException e) {
+            e.printStackTrace();
             return false;
         }
     }
