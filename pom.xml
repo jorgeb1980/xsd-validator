@@ -66,6 +66,7 @@
             <groupId>test</groupId>
             <artifactId>utils</artifactId>
             <version>${test.utils.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
