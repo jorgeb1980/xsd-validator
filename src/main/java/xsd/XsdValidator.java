@@ -14,20 +14,16 @@ public class XsdValidator {
 
     private Validator validator;
     
-    private File getFile(String location) {
-        return new File(location);
-    }
-    
     public XsdValidator(String xsdPath) throws SAXException {
         var factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-        var schemaFile = new StreamSource(getFile(xsdPath));
+        var schemaFile = new StreamSource(new File(xsdPath));
         var schema = factory.newSchema(schemaFile);
         validator = schema.newValidator();
     }
 
     public boolean isValid(String xmlPath) throws IOException, SAXException {
         try {
-            validator.validate(new StreamSource(getFile(xmlPath)));
+            validator.validate(new StreamSource(new File(xmlPath)));
             return true;
         } catch (SAXException e) {
             e.printStackTrace();
