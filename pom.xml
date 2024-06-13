@@ -57,11 +57,13 @@
         </pluginManagement>
     </build>
     <dependencies>
+        <!-- https://github.com/jorgeb1980/lib-cli-base -->
         <dependency>
             <groupId>cli-library</groupId>
             <artifactId>cli-command-library</artifactId>
             <version>${cli.library.version}</version>
         </dependency>
+        <!-- https://github.com/jorgeb1980/lib-test-utils -->
         <dependency>
             <groupId>test</groupId>
             <artifactId>utils</artifactId>
